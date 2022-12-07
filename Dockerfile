@@ -3,6 +3,7 @@ FROM ubuntu:22.04
 # ==> Download packages
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y update \
+ && apt-get upgrade \
  && apt install --no-install-recommends -y \
  software-properties-common apt-utils \
  && add-apt-repository -y universe \
@@ -23,4 +24,4 @@ RUN apt-get -y update \
  php8.1-snmp \
  php8.1-xml \
  php8.1-zip \
- && apt-get -y upgrade && apt-get clean && apt-get autoclean && apt-get autoremove --purge
+ && apt-get clean && apt-get autoclean && apt-get autoremove --purge
