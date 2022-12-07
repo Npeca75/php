@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 # ==> Download packages
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y update \
- && apt-get upgrade \
+ && apt-get -y upgrade \
  && apt install --no-install-recommends -y \
  software-properties-common apt-utils \
  && add-apt-repository -y universe \
