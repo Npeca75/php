@@ -28,4 +28,5 @@ RUN apt-get -y update \
  php8.4-xml \
  php8.4-zip \
  && apt-get -y remove software-properties-common apt-utils lsb-release ca-certificates curl apt-transport-https \
- && apt-get clean && apt-get autoclean && apt-get -y autoremove --purge
+ && apt-get clean && apt-get autoclean && apt-get -y autoremove --purge \
+ && rm -fr /tmp/*
